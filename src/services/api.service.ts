@@ -1,8 +1,8 @@
 const MODE = process.env.NEXT_PUBLIC_MODE || "dev";
 
 const BASE_URL = MODE === "prod" 
-  ? "https://www.test-servies.com" 
-  : "http://localhost:4444";
+  ? "https://pos-cafe-services.onrender.com" 
+  : "https://pos-cafe-services.onrender.com";
 
 type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
