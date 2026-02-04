@@ -226,7 +226,7 @@ const Productpage = () => {
               ))
             ) : (
               <TableRow>
-                <TableCell colSpan={4} className="h-32 text-center">
+                <TableCell colSpan={6} className="h-32 text-center">
                   <div className="flex flex-col items-center justify-center text-muted-foreground">
                     ไม่พบข้อมูลสินค้า
                   </div>
