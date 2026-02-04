@@ -1,4 +1,4 @@
-const MODE = process.env.NEXT_PUBLIC_MODE || "dev";
+const MODE = process.env.MODE || "dev";
 
 const BASE_URL = MODE === "prod" 
   ? "https://pos-cafe-services.onrender.com" 
