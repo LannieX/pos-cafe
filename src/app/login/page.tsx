@@ -7,7 +7,7 @@ export default function LoginPage() {
     <div className="grid min-h-svh lg:grid-cols-2">
       <div className="bg-muted relative hidden lg:block">
         <img
-          src="/bg/bg.jpg"
+          src="https://res.cloudinary.com/dyc6epcdk/image/upload/v1770050871/her1vz6ood7gwf64p3ep.jpg"
           alt="Image"
           className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         />

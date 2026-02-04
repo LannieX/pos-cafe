@@ -91,6 +91,9 @@ export function ProductDialog({
       { method: "POST", body: uploadData },
     );
 
+    console.log("response", response);
+    
+
     const data = await response.json();
     if (!response.ok) throw new Error("Upload failed");
     return data.secure_url;

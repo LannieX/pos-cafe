@@ -2,7 +2,7 @@ const MODE = process.env.NEXT_PUBLIC_MODE || "dev";
 
 const BASE_URL = MODE === "prod" 
   ? "https://pos-cafe-services.onrender.com" 
-  : "https://pos-cafe-services.onrender.com";
+  : "http://localhost:4444";
 
 type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
