@@ -51,6 +51,9 @@ const OrderPage = () => {
   const handleRemoveItem = (id: number) => {
     setMenuForOrder((prev) => prev.filter((item) => item.id !== id));
   };
+  const handleConfirmOrder () => {
+    setIsPayment(false);
+  }
 
   const handleConfirmOrder = async (isPay: boolean) => {
     setLoadingPayment(true);
@@ -79,7 +82,7 @@ const OrderPage = () => {
         setIsPayment(false);
         setLoadingPayment(true);
       } else {
-        setLoadingPayment(true);
+        setLoadingPayment(false);
         toast.error(res?.message || "เกิดข้อผิดพลาดในการสั่งซื้อ");
       }
     } catch (error) {
@@ -244,6 +247,7 @@ const OrderPage = () => {
         loadingPayment={loadingPayment}
         totalAmount={totalAmount}
         menuForOrder={menuForOrder}
+        handleClose={handleConfirmOrder}
         handleConfirm={(isPay: boolean) => handleConfirmOrder(isPay)}
       />
     </>

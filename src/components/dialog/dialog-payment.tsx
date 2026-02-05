@@ -8,16 +8,18 @@ export function DialogPayment({
   loadingPayment,
   totalAmount,
   handleConfirm,
+  handleClose,
   menuForOrder,
 }: {
   isOpen: boolean;
   loadingPayment: boolean;
   totalAmount: number;
   handleConfirm: (isPay: boolean) => void;
+  handleClose: () => void;
   menuForOrder: CartItemType[];
 }) {
   return (
-    <Dialog open={isOpen}>
+    <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="max-w-[600px] min-h-[50vh] [&>button]:hidden">
         {loadingPayment ? (
           <div className="w-full h-full flex items-center justify-center">
