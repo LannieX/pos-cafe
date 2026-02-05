@@ -1,6 +1,6 @@
-const MODE = process.env.MODE || "dev";
+const MODE = process.env.NEXT_PUBLIC_MODE || "dev";
 
-const BASE_URL = MODE === "prod" 
+const BASE_URL = NEXT_PUBLIC_MODE === "prod" 
   ? "https://pos-cafe-services.onrender.com" 
   : "http://localhost:4444";
 
