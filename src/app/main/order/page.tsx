@@ -51,7 +51,7 @@ const OrderPage = () => {
   const handleRemoveItem = (id: number) => {
     setMenuForOrder((prev) => prev.filter((item) => item.id !== id));
   };
-  const handleConfirmOrder () => {
+  const handleConfirmOrder = () => {
     setIsPayment(false);
   }
 
