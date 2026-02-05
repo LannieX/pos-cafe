@@ -51,7 +51,7 @@ const OrderPage = () => {
   const handleRemoveItem = (id: number) => {
     setMenuForOrder((prev) => prev.filter((item) => item.id !== id));
   };
-  const handleConfirmOrder = () => {
+  const handleClose = () => {
     setIsPayment(false);
   }
 
@@ -247,7 +247,7 @@ const OrderPage = () => {
         loadingPayment={loadingPayment}
         totalAmount={totalAmount}
         menuForOrder={menuForOrder}
-        handleClose={handleConfirmOrder}
+        handleClose={handleClose}
         handleConfirm={(isPay: boolean) => handleConfirmOrder(isPay)}
       />
     </>
