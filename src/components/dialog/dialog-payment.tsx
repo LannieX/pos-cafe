@@ -10,6 +10,7 @@ export function DialogPayment({
   handleConfirm,
   handleClose,
   menuForOrder,
+  readyPay
 }: {
   isOpen: boolean;
   loadingPayment: boolean;
@@ -17,6 +18,7 @@ export function DialogPayment({
   handleConfirm: (isPay: boolean) => void;
   handleClose: () => void;
   menuForOrder: CartItemType[];
+  readyPay: boolean
 }) {
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
@@ -71,6 +73,7 @@ export function DialogPayment({
               </div>
             </div>
             <div className="flex gap-3 w-full">
+              {!readyPay && (
               <Button
                 variant="outline"
                 className="flex-1 border-slate-300 text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-all duration-200 active:scale-95"
@@ -78,6 +81,7 @@ export function DialogPayment({
               >
                 ชำระภายหลัง
               </Button>
+              )}
               <Button
                 className="flex-1 bg-green-600 hover:bg-green-700 text-white transition-all duration-200 active:scale-95 border-transparent shadow-md"
                 onClick={() => handleConfirm(true)}
